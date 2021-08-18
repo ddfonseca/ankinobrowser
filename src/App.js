@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react'
+import CardList from './components/CardList'
+import Layout from './components/Layout'
+import SearchBox from './components/SearchBox'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const IndexPage = () => {
+    const [cards, setCards] = useState([])
+
+    const handleFormSubmit = (event) => {
+        event.preventDefault()
+        console.log('hello')
+    }
+    return (
+        <Layout>
+            <SearchBox handleFormSubmit={handleFormSubmit} />
+            <CardList cards={cards} />
+        </Layout>
+    )
 }
 
-export default App;
+export default IndexPage
