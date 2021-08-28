@@ -7,7 +7,11 @@ const dark = {
 
         background: '#282a36',
         text: '#fff',
-        backgroundInput: '#44475a'
+        backgroundInput: '#44475a',
+        hover: '#50fa7b',
+
+        grey: '#8f9595'
+        // backgroundError: 'rgba(255, 251, 14, 0.5)'
     }
 }
 

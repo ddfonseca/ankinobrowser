@@ -21,7 +21,7 @@ const Header = ({ toggleTheme }) => {
                     width={40}
                     handleDiameter={20}
                     offColor={shade(0.3, colors.primary)}
-                    onColor={colors.secundary}
+                    onColor={shade(0.2, colors.hover)}
                 />
             </S.ContainerFixedWidth>
         </S.Container>

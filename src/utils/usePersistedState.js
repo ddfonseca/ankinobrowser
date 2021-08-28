@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react'
 
 const usePersistedState = (key, initialState) => {
     const storageValue = localStorage.getItem(key)
-    const something = storageValue ? JSON.parse(storageValue) : initialState
+    const getValue = storageValue ? JSON.parse(storageValue) : initialState
 
-    const [state, setState] = useState(something)
+    const [state, setState] = useState(getValue)
 
     useEffect(() => {
         localStorage.setItem(key, JSON.stringify(state))

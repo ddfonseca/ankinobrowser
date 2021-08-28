@@ -29,3 +29,8 @@ export const moveInRight = keyframes`0% {
         opacity: 1;
     }
 `
+
+export const moveInCircle = keyframes`
+    from { transform: rotate(0deg)}
+    to { transform: rotate(360deg)}
+`

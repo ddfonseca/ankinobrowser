@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 import { moveInRight } from '../../styles/animation'
 import { Search } from '@styled-icons/fluentui-system-regular/Search'
+import { Clear } from '@styled-icons/material-sharp/Clear'
 
 export const SearchWrapper = styled.div`
     position: relative;
@@ -22,8 +23,24 @@ export const Button = styled.button`
 
 export const SearchIcon = styled(Search)`
     position: absolute;
-    height: 70%;
+    height: 65%;
     right: 2%;
+
+    &:hover {
+        cursor: pointer;
+        color: ${({ theme }) => theme.colors.hover};
+    }
+    color: ${({ theme }) => (theme.title === 'light' ? '#3a3a3a' : 'none')};
+`
+export const ClearIcon = styled(Clear)`
+    position: absolute;
+    height: 65%;
+    right: 8%;
+    &:hover {
+        cursor: pointer;
+        color: ${({ theme }) => theme.colors.hover};
+    }
+    color: ${({ theme }) => (theme.title === 'light' ? '#3a3a3a' : 'none')};
 `
 
 export const Input = styled.input`
@@ -31,7 +48,6 @@ export const Input = styled.input`
     color: ${({ theme }) => theme.colors.text};
     height: 50px;
     flex-grow: 1;
-    /* border-radius: 100px; */
     border-radius: 10px;
     box-shadow: none;
     border: none;
@@ -39,4 +55,8 @@ export const Input = styled.input`
     &:focus {
         outline: none;
     }
+
+    border: 2px groove
+        ${({ theme }) =>
+            theme.title === 'light' ? theme.colors.primary : 'none'};
 `

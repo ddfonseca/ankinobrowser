@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
-export const CardListWrapper = styled.ol`
+export const CardListWrapper = styled.ul`
+    list-style: none;
     /* list-style-position: outside; */
 `
